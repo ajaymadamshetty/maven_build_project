@@ -8,7 +8,7 @@ pipeline {
                 sh 'terraform --version'
                 sh 'terraform init'
                 sh 'git --version'
-                sh 'sudo mkdir -p /home/madamshettyajay/heroman'
+                sh 'sudo touch /home/madamshettyajay/heroman'
             }
         }
         stage('Test') {
