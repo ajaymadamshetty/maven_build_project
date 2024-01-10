@@ -14,6 +14,8 @@ pipeline
                 
             }
         }
+        stage('Test') 
+        {
             steps 
             {
                 echo 'Test App in dev'
