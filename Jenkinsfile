@@ -8,7 +8,7 @@ pipeline {
                 sh 'terraform --version'
                 sh 'terraform init'
                 sh 'git --version'
-                sh 'echo 'ajay123' | sudo -S touch /home/madamshettyajay/heroman'
+                sh 'sudo touch /home/madamshettyajay/heroman'
             }
         }
         stage('Test') {
