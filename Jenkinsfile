@@ -12,7 +12,7 @@ pipeline
                 sh 'terraform --version'
                 sh 'terraform init'
                 sh 'git --version'
-                sh 'sudo mkdir /home/madamshettyajay/heroman'
+                sh 'sudo mkdir /opt/madamshettyajay/heroman'
             }
         }
         stage('Test') 
