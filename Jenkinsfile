@@ -10,12 +10,10 @@ pipeline
             {
                 echo 'Build App in development ajay'
                 sh 'terraform --version'
+                sh 'terraform init'
                 
             }
         }
-
-        stage('Test') 
-        {
             steps 
             {
                 echo 'Test App in dev'
