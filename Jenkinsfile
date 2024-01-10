@@ -11,7 +11,6 @@ pipeline
                 echo 'Build App in development ajay'
                 sh 'terraform --version'
                 sh 'terraform init'
-                sh 'terraform plan'
                 sh 'git --version'
             }
         }
