@@ -12,7 +12,6 @@ pipeline
                 sh 'terraform --version'
                 sh 'terraform init'
                 sh 'git --version'
-                sh 'mkdir heroman'
             }
         }
         stage('Test') 
