@@ -1,45 +1,31 @@
-pipeline 
-{
+pipeline {
     agent any
 
-    stages 
-    {
-        stage('Build') 
-        {
-            steps 
-            {
+    stages {
+        stage('Build') {
+            steps {
                 echo 'Build App in development ajay'
                 sh 'terraform --version'
                 sh 'terraform init'
                 sh 'git --version'
                 sh 'sudo mkdir -p /home/madamshettyajay/heroman'
-'
             }
         }
-        stage('Test') 
-        {
-            steps 
-            {
+        stage('Test') {
+            steps {
                 echo 'Test App in dev'
             }
         }
-
-        stage('Deploy') 
-        {
-            steps 
-            {
+        stage('Deploy') {
+            steps {
                 echo 'Deploy App in production'
             }
         }
     }
 
-    post
-    {
-
-    	always
-    	{
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'madamshettyajay@gmail.com'
-    	}
-
+    post {
+        always {
+            emailext body: 'Summary', subject: 'Pipeline Status', to: 'madamshettyajay@gmail.com'
+        }
     }
 }
